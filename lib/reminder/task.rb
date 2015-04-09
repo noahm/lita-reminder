@@ -136,9 +136,9 @@ class ReminderTask
       end
       attrs['type'] = message['type']
       attrs['time'] = message['time']
-      attrs['first'] = Chronic.parse(message['first']) unless message['first'].nil?
-      attrs['repeat'] = message['repeat']
-      attrs['repeat_interval'] = message['repeat_interval'] || '10m'
+      # attrs['first'] = Chronic.parse(message['first']) unless message['first'].nil?
+      # attrs['repeat'] = message['repeat']
+      # attrs['repeat_interval'] = message['repeat_interval'] || '10m'
       attrs['task'] = message['task']
       if attrs['type'] == 'in'
         attrs['type'] = 'at'
